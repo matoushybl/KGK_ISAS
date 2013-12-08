@@ -1,0 +1,4 @@
+<resources>
+    <string name="title_activity_settings">Nastavení</string>
+    <string name="preference">Třída</string>
+</resources>

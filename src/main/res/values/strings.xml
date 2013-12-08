@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KGK iSAS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_marks">Marks</string>
+    <string name="button_substitution">Substitution</string>
+    <string name="button_moodle">Moodle</string>
+    <string name="button_canteen">Canteen</string>
+    <string name="button_today">Today</string>
+    <string name="button_tomorrow">Tomorrow</string>
+    <string name="button_back">&lt;</string>
+    <string name="button_forward">&gt;</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_ok">OK</string>
+    <string name="preference_class">Default class</string>
+    <string name="dialog_title_class">Choose your class…</string>
+    <string name="dialog_title_net">Connection problem…</string>
+    <string name="dialog_net_text">It looks like you are not connected to Internet, this application won\'t work without Internet connection.</string>
+    <string name="image_description">Logo of school</string>
+
+</resources>

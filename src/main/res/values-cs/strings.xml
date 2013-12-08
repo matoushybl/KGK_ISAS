@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KGK iSAS</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="button_marks">Známky</string>
+    <string name="button_substitution">Suplování</string>
+    <string name="button_moodle">Moodle</string>
+    <string name="button_canteen">Obědy</string>
+    <string name="button_today">Dnes</string>
+    <string name="button_tomorrow">Zítra</string>
+    <string name="button_back">&lt;</string>
+    <string name="button_forward">&gt;</string>
+    <string name="button_cancel">Zrušit</string>
+    <string name="button_ok">OK</string>
+    <string name="preference_class">Třída</string>
+    <string name="dialog_title_class">Vyberte třídu…</string>
+    <string name="dialog_title_net">Problém s připojením…</string>
+    <string name="dialog_net_text">Zdá se, že zařízení není připojeno k Internetu, tato aplikace bez připojení k Internetu nefunguje.</string>
+    <string name="image_description">Logo školy</string>
+
+</resources>
