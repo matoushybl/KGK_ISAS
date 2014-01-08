@@ -18,5 +18,9 @@
     <string name="dialog_title_net">Problém s připojením…</string>
     <string name="dialog_net_text">Zdá se, že zařízení není připojeno k Internetu, tato aplikace bez připojení k Internetu nefunguje.</string>
     <string name="image_description">Logo školy</string>
-
+    <string name="button_timetable_our">Vaše třída</string>
+    <string name="button_timetable_other">Jiná třída</string>
+    <string name="button_timetable_teacher">Učitel</string>
+    <string name="button_timetable">Rozvrh hodin</string>
+    <string name="button_official_website">Stránka školy</string>
 </resources>

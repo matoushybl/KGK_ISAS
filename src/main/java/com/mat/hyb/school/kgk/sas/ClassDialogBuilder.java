@@ -16,10 +16,13 @@ public class ClassDialogBuilder {
     private AlertDialog.Builder builder;
     private PreferencesProvider preferencesProvider;
     private Dialog dialog;
+    private PreconfiguredWebView webView;
+    private UrlProvider urlProvider;
 
     public ClassDialogBuilder(Context context) {
         preferencesProvider = new PreferencesProvider(context);
         builder = new AlertDialog.Builder(context);
+        urlProvider = new UrlProvider(context);
         builder.setTitle(R.string.dialog_title_class);
         ListView listView = new ListView(context);
         listView.setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1,
@@ -28,8 +31,12 @@ public class ClassDialogBuilder {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                preferencesProvider.setDefaultClass(position);
-                preferencesProvider.setFirstRun();
+                if (webView == null) {
+                    preferencesProvider.setDefaultClass(position);
+                    preferencesProvider.setFirstRun();
+                } else {
+                    webView.loadUrl(urlProvider.getTimetableUrl(new ClassIdProvider().getClassId(position)));
+                }
                 dialog.dismiss();
             }
         });
@@ -43,6 +50,11 @@ public class ClassDialogBuilder {
     }
 
     public void build() {
+        dialog = builder.show();
+    }
+
+    public void build(PreconfiguredWebView webView) {
+        this.webView = webView;
         dialog = builder.show();
     }
 }

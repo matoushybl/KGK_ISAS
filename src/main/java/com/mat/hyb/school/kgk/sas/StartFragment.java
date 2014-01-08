@@ -1,6 +1,7 @@
 package com.mat.hyb.school.kgk.sas;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
@@ -20,11 +21,16 @@ public class StartFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         if (getActivity() != null && getActivity().getActionBar() != null) {
-            getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
             getActivity().getActionBar().setDisplayShowHomeEnabled(true);
+            getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
             getActivity().getActionBar().setDisplayUseLogoEnabled(true);
         }
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
     }
 
     @Override
@@ -35,6 +41,8 @@ public class StartFragment extends Fragment {
         Button supplementation = (Button) layout.findViewById(R.id.button_substitution);
         Button moodle = (Button) layout.findViewById(R.id.button_moodle);
         Button canteen = (Button) layout.findViewById(R.id.button_canteen);
+        Button timetable = (Button) layout.findViewById(R.id.button_timetable);
+        Button website = (Button) layout.findViewById(R.id.button_website);
 
         marks.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +83,28 @@ public class StartFragment extends Fragment {
                     startActivity(new Intent().setAction(Intent.ACTION_VIEW)
                             .setData(Uri.parse(new UrlProvider(getActivity().getApplicationContext())
                                     .getCanteenUrl())));
+                }
+            }
+        });
+        timetable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getFragmentManager() != null) {
+                    getFragmentManager().beginTransaction()
+                            .replace(R.id.container, new TimetableFragment()).commit();
+                }
+            }
+        });
+        website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getFragmentManager() != null) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString(BasicWebFragment.MODE, BasicWebFragment.MODE_WEBSITE);
+                    BasicWebFragment webFragment = new BasicWebFragment();
+                    webFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().replace(R.id.container, webFragment)
+                            .commit();
                 }
             }
         });

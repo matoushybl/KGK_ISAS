@@ -31,10 +31,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+
+        <Button
+            android:id="@+id/button_timetable"
+            android:text="@string/button_timetable"
+            android:layout_below="@id/button_substitution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/button_moodle"
             android:text="@string/button_moodle"
-            android:layout_below="@id/button_substitution"
+            android:layout_below="@id/button_timetable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -44,6 +52,14 @@
             android:layout_below="@id/button_moodle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_website"
+            android:layout_below="@id/button_canteen"
+            android:text="@string/button_official_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
     </RelativeLayout>
 </RelativeLayout>

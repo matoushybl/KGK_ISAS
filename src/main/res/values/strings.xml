@@ -19,5 +19,10 @@
     <string name="dialog_title_net">Connection problem…</string>
     <string name="dialog_net_text">It looks like you are not connected to Internet, this application won\'t work without Internet connection.</string>
     <string name="image_description">Logo of school</string>
+    <string name="button_timetable_our">Your class</string>
+    <string name="button_timetable_other">Other class</string>
+    <string name="button_timetable_teacher">Teacher</string>
+    <string name="button_timetable">Timetable</string>
+    <string name="button_official_website">School website</string>
 
 </resources>

@@ -14,6 +14,7 @@ public class BasicWebFragment extends Fragment {
     public static final String MODE_CANTEEN = "canteen";
     public static final String MODE_MOODLE = "moodle";
     public static final String MODE = "mode";
+    public static final String MODE_WEBSITE = "website";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,15 +40,17 @@ public class BasicWebFragment extends Fragment {
         } else if (getArguments() != null && getActivity() != null && getArguments().getString(MODE).equals(MODE_CANTEEN)) {
             webView.loadUrl(new UrlProvider(getActivity().getApplicationContext())
                     .getCanteenUrl());
+        } else if (getArguments() != null && getActivity() !=null && getArguments().getString(MODE).equals(MODE_WEBSITE)) {
+            webView.loadUrl(UrlProvider.WEBSITE);
         }
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (webView.canGoBack()) {
-                    webView.goBack();
+            back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (webView.canGoBack()) {
+                        webView.goBack();
+                    }
                 }
-            }
-        });
+            });
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
